@@ -10,7 +10,7 @@ import lombok.Setter;
 public class User {
     private int id;
     private String username;
-    private String paasword;
+    private String password;
     private String email;
     private Timestamp createdAt;
 }

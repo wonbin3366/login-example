@@ -2,6 +2,8 @@ package shop.mtcoding.loginexample.model;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import org.mybatis.spring.boot.test.autoconfigure.MybatisTest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,19 +17,17 @@ public class UserRepositoryTest {
     private UserRepository userRepository;
 
     @Test
-    public void findByUsernameAndPassword_test() throws Exception {
+    public void findAllWithUser_test() throws Exception {
         // given
-        ObjectMapper om = new ObjectMapper();
-        String username = "ssar";
-        String password = "1234";
+        ObjectMapper om = new ObjectMapper(); // Jackson
 
         // when
-        User result = userRepository.findByUsernameAndPassword(username, password);
-        String responseBody = om.writeValueAsString(result);
+        List<User> JoinReqDto = userRepository.findAll();
+        String responseBody = om.writeValueAsString(JoinReqDto);
         System.out.println("테스트 : " + responseBody);
 
         // then
-        assertThat(result.getUsername()).isEqualTo("ssar");
+        assertThat(JoinReqDto.get(0).getUsername()).isEqualTo("ssar");
     }
 
 }

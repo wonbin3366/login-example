@@ -11,23 +11,9 @@
         </head>
 
         <body>
-            <h1>로그인 페이지</h1>
-            <br />
-
-            <form action="/login" method="post">
-                <div>
-                    <input type="text" name="username" placeholder="Enter username" id="username">
-                </div>
-
-                <div>
-                    <input type="password" name="password" placeholder="Enter password" id="password">
-                </div>
-                <button type="submit" class="btn btn-warning">로그인</button>
-            </form>
-            <br>
+            <h1>메인 페이지</h1>
+            <a href="/loginForm">로그인</a>
             <a href="/joinForm">회원가입</a>
-
-
         </body>
 
         </html>

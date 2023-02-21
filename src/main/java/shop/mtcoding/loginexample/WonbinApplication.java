@@ -1,4 +1,4 @@
-package shop.mtcoding.wonbin;
+package shop.mtcoding.loginexample;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

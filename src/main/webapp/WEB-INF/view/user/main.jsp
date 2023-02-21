@@ -14,6 +14,7 @@
             <h1>메인 페이지</h1>
             <a href="/loginForm">로그인</a>
             <a href="/joinForm">회원가입</a>
+            <a href="/logout">로그아웃</a>
         </body>
 
         </html>

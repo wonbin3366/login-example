@@ -62,11 +62,13 @@ public class UserController {
 
     @GetMapping({ "/", "main" })
     public String main() {
-        User principal = (User) session.getAttribute("principal");
-        if (principal == null) {
-            return "redirect:/loginForm";
-        }
         return "/user/main";
+    }
+
+    @GetMapping("/logout")
+    public String logout() {
+        session.invalidate();
+        return "redirect:/";
     }
 
 }
